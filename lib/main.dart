@@ -16,7 +16,7 @@ class PROFILE extends StatelessWidget {
           "Lunar Astronaut ID",
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.grey[850],
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
