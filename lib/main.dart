@@ -10,28 +10,102 @@ class PROFILE extends StatelessWidget {
   Widget build(BuildContext context) {
     //layout
     return Scaffold(
+      backgroundColor: Colors.grey[700],
       appBar: AppBar(
         title: const Text(
           "Lunar Astronaut ID",
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 22, 33, 52),
+        backgroundColor: Colors.grey[900],
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('astro.jpg'), fit: BoxFit.cover)),
-        child: Column(children: const <Widget>[
-          Text(
-            'Full Name:',
-            style: TextStyle(
-                backgroundColor: Color.fromARGB(255, 22, 33, 52),
-                color: Colors.white),
-          ),
-          Text('Mpho Mulaudzi'),
-        ]),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                radius: 40.0,
+                backgroundImage: AssetImage('assets/astro.jpg'),
+              ),
+            ),
+            Divider(
+              color: Colors.grey[800],
+              height: 60.0,
+            ),
+            Text(
+              'NAME',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'Mpho Mulaudzi',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                fontWeight: FontWeight.bold,
+                fontSize: 28.0,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Text(
+              'HOMETOWN',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'Pretoria, South Africa',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                fontWeight: FontWeight.bold,
+                fontSize: 28.0,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Text(
+              'CURRENT POSITION',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'Lunar Astronaut',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                fontWeight: FontWeight.bold,
+                fontSize: 28.0,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'christianmpho@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
